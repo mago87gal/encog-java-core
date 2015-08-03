@@ -162,7 +162,7 @@ public final class EncogUtility {
 			final boolean headers) {
 		binFile.delete();
 		final CSVNeuralDataSet csv = new CSVNeuralDataSet(csvFile.toString(),
-				inputCount, outputCount, false);
+				inputCount, outputCount, headers);
 		final BufferedMLDataSet buffer = new BufferedMLDataSet(binFile);
 		buffer.beginLoad(inputCount, outputCount);
 		for (final MLDataPair pair : csv) {
